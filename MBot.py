@@ -17,8 +17,8 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith('ping'):
-        await client.send_message(message.channel, "**Pong!** :ping_pong:")
+        await client.send_message(message.channel, "**Pong!** " + client.ping + "ms :ping_pong:")
     elif message.content.startswith('Hello'):
-        await client.send_message(message.channel, random.choice( ['Hi!', 'Hello,how are you?'] ))
+        await client.send_message(message.channel, random.choice( ['Hi!', 'Hello, how are you?'] ))
 
 client.run('MzMyODQ1OTAxNDI2OTgyOTEy.DEZE4Q.hVwjzEr-W1mRYVJ98R8fHCyLt_s')
